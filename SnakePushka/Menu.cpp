@@ -48,16 +48,16 @@ void Menu::Enter() {
 void Menu::SelectColor()
 {
 	//Offering player to choose screen color
-	std::cout << "Select color: 1 - GREEN, 2 - RED, 3 - YELLOW, 4 - BLUE, 5 - SUPRIZE ME!: ";
+	std::cout << "Select color: 0 - Dont change, 1 - GREEN, 2 - RED, 3 - YELLOW, 4 - BLUE, 5 - SUPRIZE ME!: ";
 	char color;
 	while (true)
 	{
 		std::cin >> color;
-		if (color < 49 || color > 53)
+		if (color < 48 || color > 53)
 		{
 			//If entered value is wrong
 			std::cout << "Try just one of these numbers" << std::endl;
-			std::cout << "1 - GREEN, 2 - RED, 3 - YELLOW, 4 - BLUE, 5 - SUPRIZE ME!: ";
+			std::cout << "0 - Dont chsnge, 1 - GREEN, 2 - RED, 3 - YELLOW, 4 - BLUE, 5 - SUPRIZE ME!: ";
 			std::cin.clear();
 		}
 		else
@@ -65,6 +65,8 @@ void Menu::SelectColor()
 			//Setting one of picked color
 			switch (color)
 			{
+			case '0':
+				break;
 			case '1':
 				SetConsoleTextAttribute(m_consoleColor, Color::GREEN);
 				break;
