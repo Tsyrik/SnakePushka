@@ -1,0 +1,10 @@
+.vs
+*.filters
+*.suo
+debug
+release
+*.vcxproj
+*.user
+*.sln
+packages
+*.config
